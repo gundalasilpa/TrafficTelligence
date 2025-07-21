@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Volume Estimation</title>
+    <style>
+        body {
+            background-image: url("/static/background.png");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 100px auto;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Traffic Volume Estimation</h1>
+    <div class="container">
+        <h3>Please enter the following details</h3>
+        <form action="/predict" method="post">
+            <input type="text" name="temp" placeholder="Temperature (°C)" required><br>
+            <input type="text" name="rain" placeholder="Rainfall (mm)" required><br>
+            <input type="text" name="snow" placeholder="Snowfall (mm)" required><br>
+            <input type="text" name="clouds" placeholder="Cloud Coverage (%)" required><br>
+            <input type="text" name="humidity" placeholder="Humidity (%)" required><br>
+            <input type="text" name="wind" placeholder="Wind Speed (km/h)" required><br>
+            <input type="submit" value="Estimate Traffic Volume">
+        </form>
+    </div>
+</body>
+</html>
